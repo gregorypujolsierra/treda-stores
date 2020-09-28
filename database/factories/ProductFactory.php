@@ -29,7 +29,7 @@ class ProductFactory extends Factory
             'sku' => substr($name_arr[0], 0, 4).$this->faker->randomNumber(4),
             'description' => $this->faker->text(200),
             'price' => $this->faker->randomFloat(2, 5, 1000),
-            'store_id' => $this->faker->numberBetween(1, 9),
+            'store_id' => $this->faker->numberBetween(1, config('app.max_number_of_stores', 5)),
             'image' => $this->faker->imageUrl(480, 360, 'technics'),
         ];
     }

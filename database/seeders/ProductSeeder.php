@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
         DB::table('products')->truncate();
 
         Product::factory()
-            ->times(200)
+            ->times(config('app.max_number_of_products', 50))
             ->create();
     }
 }

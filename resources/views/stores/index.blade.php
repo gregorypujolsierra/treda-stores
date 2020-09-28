@@ -13,6 +13,7 @@
                     <td>ID</td>
                     <td>Name</td>
                     <td>Opened since</td>
+                    <td>Products</td>
                     <td>Actions</td>
                 </tr>
                 </thead>
@@ -22,6 +23,11 @@
                         <td>{{ $store->id }}</td>
                         <td>{{ $store->name }}</td>
                         <td>{{ $store->opened_since }}</td>
+                        <td>
+                            <a href="{{ "http://treda-stores/api/stores/" . $store->id }}" class="btn btn-primary" target="_blank">
+                                See products
+                            </a>
+                        </td>
                         <td class="row">
                             <a href="{{ route('stores.edit',$store->id)}}" class="btn btn-primary">Edit</a>
                             <form action="{{ route('stores.destroy', $store->id)}}" method="post">

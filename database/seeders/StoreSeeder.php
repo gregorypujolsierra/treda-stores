@@ -21,7 +21,7 @@ class StoreSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
         Store::factory()
-            ->times(9)
+            ->times(config('app.max_number_of_stores', 5))
             ->create();
     }
 }
