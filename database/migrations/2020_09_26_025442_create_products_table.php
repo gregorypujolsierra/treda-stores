@@ -22,7 +22,7 @@ class CreateProductsTable extends Migration
                 $table->string('description', 512);
                 $table->unsignedBigInteger('price');
                 $table->unsignedBigInteger('store_id')->nullable();
-                $table->string('image', 128);
+                $table->string('image', 128)->nullable();
                 $table->timestamps();
 
                 $table->foreign('store_id')->references('id')->on('stores')
