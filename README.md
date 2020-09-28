@@ -29,3 +29,10 @@ vagrant@homestead:~/treda/treda-stores$ npm run dev
 
 - And reload Vagrant:
 ```:~/Homestead$ vagrant reload --provision```
+
+## Running project
+
+- Run the virtual machine: 
+```:~/Homestead$ vagrant up```
+
+- Open `treda-stores/` in the browser
