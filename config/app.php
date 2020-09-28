@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Treda Stores'),
 
     /*
     |--------------------------------------------------------------------------
@@ -229,4 +229,7 @@ return [
 
     ],
 
+    'default_pagination' => env('DEFAULT_PAGINATION', 10),
+    'max_number_of_stores' => 3,
+    'max_number_of_products' => 15,
 ];
